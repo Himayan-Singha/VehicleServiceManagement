@@ -1,13 +1,16 @@
 package com.capgemini;
 
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.capgemini.entities.Enquiry;
 import com.capgemini.entities.ServiceCatalog;
 import com.capgemini.entities.ServiceType;
 import com.capgemini.repository.ServiceCatalogRepository;
@@ -35,5 +38,10 @@ public class ServiceCatalogController {
 		servicecatalog.date = java.time.LocalDateTime.now().format(formatter);
 		sercatrepository.save(servicecatalog);
 		return "Service Catalog created!!!";
+	}
+	
+	@GetMapping("/")
+	public List<ServiceCatalog> getRequest(){
+		return sercatrepository.findAll();
 	}
 }

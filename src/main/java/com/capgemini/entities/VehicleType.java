@@ -1,5 +1,6 @@
 package com.capgemini.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +21,8 @@ public class VehicleType {
 	private Integer vehicle_mod_id;
 	private String vehicle_model_name;
 	
+	/*@Column(nullable = false)
+	public boolean isDeleted = false;*/
 	public String create_Date_Time;
 	public String update_Date_Time;
-	public String date;
 }

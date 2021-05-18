@@ -1,6 +1,7 @@
 package com.capgemini.entities;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,8 +28,10 @@ public class Enquiry {
 	@JoinColumn(name="user_id",referencedColumnName="user_id")
 	private UserDetails user_details;
 	
+	/*@Column(nullable = false)
+	public boolean isDeleted = false;*/
 	public String create_Date_Time;
 	public String update_Date_Time;
-	public String date;
+	//public String date;
 	
 }
