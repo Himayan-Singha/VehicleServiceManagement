@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,8 +29,10 @@ public class ServiceType {
 	private Integer service_id;
 	private String service_desc;
 	
+	/*@Column(nullable = false)
+	public boolean isDeleted = false;*/
 	public String create_Date_Time;
 	public String update_Date_Time;
-	public String date;
+	//public String date;
 	
 }

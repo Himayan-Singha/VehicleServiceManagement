@@ -24,8 +24,12 @@ public class Mechanics {
 	private String mechanicsMobile;
 	private LocalDate joiningDate =LocalDate.now();
 	
+	/*@Column(nullable = false)
+	public boolean isDeleted = false;*/
 	public String create_Date_Time;
 	public String update_Date_Time;
-	public String date;
+	//public String date;
+	
+	
 
 }

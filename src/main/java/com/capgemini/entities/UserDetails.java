@@ -20,19 +20,21 @@ public class UserDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private int user_id;
-	//@Column(nullable = false, unique = true)
+	@Column(nullable = false, unique = true)
 	private String user_name;
-	//@Column(nullable = false)
+	@Column(nullable = false)
 	private String user_email;
-	//@Column(nullable = false)
+	@Column(nullable = false)
 	private String user_mobile;
-	//@Column(nullable = false)
+	@Column(nullable = false)
 	private String user_password;
-	//@Column(nullable = false)
+	@Column(nullable = false)
 	private String user_type;
 	
+	/*@Column(nullable = false)
+	public boolean isDeleted = false;*/
 	public String create_Date_Time;
 	public String update_Date_Time;
-	public String date;
+	
 
 }
